@@ -1,4 +1,6 @@
+import { UsersProfileService } from './../users-profile.service';
 import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-user-profile',
@@ -7,7 +9,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserProfileComponent implements OnInit {
 
-  constructor() { }
+
+  profile: any;
+  repos: any;
+  username: any;
+  
+
+  constructor(private u_profileservice: UsersProfileService) {
+
+    this.u_profileservice.getProfileDetails().subscribe(profile => {
+      console.log(profile);
+      this.profile = profile;
+    });
+
+    this.u_profileservice.getUserRepos().subscribe(repos => {
+      console.log(repos);
+      this.repos = repos;
+    });
+    
+   }
+   findUserProfile() {
+     this.u_profileservice.updateProfile (this.username);
+   }
 
   ngOnInit() {
   }
