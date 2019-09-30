@@ -7,7 +7,9 @@ import { ProfileFormComponent } from './profile-form/profile-form.component'
 
 const routes: Routes = [ 
   {path: 'profile', component: UserProfileComponent},
-  {path: 'form', component: ProfileFormComponent}
+  {path: 'form', component: ProfileFormComponent},
+
+  { path: '', redirectTo:"/profile", pathMatch:"full"},
 
 ];
 
