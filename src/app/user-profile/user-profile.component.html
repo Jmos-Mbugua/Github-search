@@ -1,1 +1,80 @@
-<p>user-profile works!</p>
+<div class="container" id="profile"></div>
+<div class="row">
+    <div class="col-md-6">
+        <div *ngIf="profile">
+            <img src="{{profile.avatar_url}}" class="rounded-circle img-responsive mt-4 pl-5 " width="250px"
+                height="250px" alt="profile Photo">
+            <h2 class="text-success text-align-center">Profile Info</h2>
+            <ul>
+                <li *ngIf="profile.bio">{{profile.bio}}</li>
+                <li *ngIf="profile.email"><a href="emailto: {{profile.email}}" target="_blank">{{profile.email}}</a>
+                </li>
+                <li *ngIf="profile.blog"><a href="{{profile.blog}}" target="_blank">{{profile.blog}}</a></li>
+            </ul>
+            <hr>
+            <div>
+                <div>
+                    <p class="label label-default M-1">{{profile.followers}} Followers</p>
+                    <p class="label label-primary m-1">Following {{profile.following}}</p>
+                </div>
+
+                <div>                    
+                    <p class="label label-info m-1">{{profile.public_repos}} Public Repos</p>
+                </div>
+                <div>
+                    <p><a href="{{profile.html_url}}" target="_blank" class="btn btn-primary btn-sm">
+                            View profile on github
+                        </a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="col-md-6">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Repos</h3>
+        </div>
+        <div class="panel-body" *ngFor="let repo of repos">
+            <p>
+                {{repo.name}}
+            </p>
+            <hr>
+            <p><a href="{{repo.html_url}}" target="_blank" class="btn btn-sm btn-success">Find in Github</a></p>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+<!-- <div class="row">
+                <div class="col-sm-5">
+                    <img src="{{profile.avatar_url}}" class="rounded-circle img-responsive mt-4 pl-5 " width="250px"
+                        height="250px" alt="profile Photo">
+             
+             
+                    <ul class="list--group">
+                        <li class="list-group-item" *ngIf="profile.bio">{{profile.bio}}</li>
+                       
+                        <li class="list-group-item" *ngIf="profile.email"><a href="emailto: {{profile.email}}"
+                                target="_blank">{{profile.email}}</a></li>
+                        <li class="list-group-item" *ngIf="profile.blog"><a href="{{profile.blog}}"
+                                target="_blank">{{profile.blog}}</a></li>
+                    </ul>
+                    <div>
+                            <p class="label label-default m-3">{{profile.followers}} Followers</p>
+                            <p class="label label-primary m-3">Following {{profile.following}}</p>
+                            <p class="label label-success m-3">{{profile.public_gists}} Public gists</p>
+                            <p class="label label-info" m-3>{{profile.public_repos}} Public Repos</p>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    
+
+                </div>
+            </div> -->
