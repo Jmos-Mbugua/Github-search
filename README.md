@@ -1,27 +1,33 @@
-# GithubSearch
+# Github-search
+This website allows users to search github users and repositories
+### Author
+* John Mbugua
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.4.
+### setup
+* Clone this repo through git clone https://github.com/Jmos-Mbugua/Github-search
+* Extract the file into your preferred location
+* Navigate to the files through the terminal.
+* Open the application through https://jmos-mbugua.github.io/Github-search/
+### Technologies used
+* HTML
+* CSS
+* Bootstrap
+* Javascript
+* Angular
+### BDD
+| Behaviour    | input     | output     |
+| -------------| :--------:| -----------|
+|Page Loads  | User navigates through the application |User is able to access and read through the application |
+|click search link|User clicks on the search link in the navigation bar|THe user is directed to the search page with a form|
+|Input user name|The user inputs the name of the github user he/she is searching for|The page displays the users searched for|
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### Known Bugs
+The Appliccation doesn't search for specific repositories yet
+### License
+This project is Licensed under MIT.
+©2019 Copyright.
+### Collaborate
+>To Collaborate, Reach me out at:
+>>Github: Jmos-Mbugua
+>>Email: johnmbugua849@gmail.com
+>>Livelink: https://jmos-mbugua.github.io/Jmos-Mbugua/
