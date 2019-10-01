@@ -4,19 +4,23 @@
             <input type="text" class="form-control" placeholder="Search github users" #username name="username">
         </div>
         <div class="col-4">
-            <button type="submit" class="btn btn-primary" (click)='userSearchString(username.value)'>Search Users</button>
+            <button type="submit" class="btn btn-primary" (click)='userSearchString(username.value)'>Search
+                Users</button>
         </div>
     </div>
 </form>
 <div class="container-fluid py-5 bg-white bg-transparent" *ngFor="let user of users?.items">
-    <div class="card" >
-        <div class="row">
-            <div class="col-sm">
-                <!-- <div>{{user.avatar_url}}</div> -->
-                <div class="card-header text-info">User name: {{user.login}}</div>
-                <div class="card-body"> Find in Github: <a href="emailto: {{user.html_url}}"
-                        target="_blank">{{user.html_url}}</a></div>
+
+<div class="row text-center">
+        <div class="col-sm-8">
+            <div class="card bg-warning">
+                <div class="float-left"> <img src="{{user.avatar_url}}" class="img-rounded" width="60px" height="60px" alt="profile image"></div>
+                <div class="card-header text-info">Username: {{user.login}}</div>
+                <div class="card-body float-right">
+                    <a href="{{user.html_url}}" target="_blank" class="btn btn-danger btn-sm btn-lg">
+                        View profile on github
+                    </a>
+                </div>
             </div>
         </div>
     </div>
-</div>
